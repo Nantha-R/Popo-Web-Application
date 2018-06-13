@@ -1,0 +1,55 @@
+#features{
+	font-size: 40pt;
+	font-family: Calibri;
+	-webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+.overlay{
+  background-color: #000;
+  color: #fff;
+  opacity: 0.85;
+  height: inherit;
+  width: 100%;
+  padding-top: 25%;
+  padding-left:50px;
+  transition: all .5s ease;
+  margin-left: -100%;
+}
+.overlay span{
+  font-weight: bold;
+  font-size: 30px;
+  vertical-align: middle;
+}
+.card:hover>.overlay{
+  margin-left: 0%;
+}
+.card{
+  box-shadow:0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+  background-color: #fff;
+  padding: 10px 10px;
+  height: inherit;
+  overflow: hidden;
+}
+.service-cards{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 300px;
+}
+.zero-padding{
+  padding: 0;
+}
+.time{
+  background-image:url(../imageFiles/time.jpg);
+  background-position: center;
+  background-size: 100% 100%;
+}
+.gps{
+  background-image: url(../imageFiles/gps.jpg);
+  background-position: center;
+  background-size: 100% 100%;
+}
+.bar{
+  background-image:url(../imageFiles/barcode.jpg);
+  background-position: center;
+  background-size: 100% 100%;
+}
