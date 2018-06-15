@@ -20,7 +20,7 @@
   font-size: 30px;
   vertical-align: middle;
 }
-.card:hover>.overlay{
+.card:hover > .overlay{
   margin-left: 0%;
 }
 .card{
@@ -38,18 +38,16 @@
 .zero-padding{
   padding: 0;
 }
+.gps, .time, .bar
+{
+  background-size: 100% 100%;
+}
 .time{
   background-image:url(../imageFiles/time.jpg);
-  background-position: center;
-  background-size: 100% 100%;
 }
 .gps{
   background-image: url(../imageFiles/gps.jpg);
-  background-position: center;
-  background-size: 100% 100%;
 }
 .bar{
   background-image:url(../imageFiles/barcode.jpg);
-  background-position: center;
-  background-size: 100% 100%;
 }
