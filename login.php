@@ -15,12 +15,12 @@
       <strong>Hub Id</strong>
       <div class="input-group margin-top">
         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-        <input type="text" class="form-control" placeholder="Enter the Hub Id" name="hub_id">
+        <input type="text" class="form-control" placeholder="Enter the Hub Id" name="hub_id" required>
       </div><br>
       <strong>Password</strong>
       <div class="input-group margin-top">
         <span class="input-group-addon"><i class="glyphicon glyphicon-lock "></i></span>
-        <input type="password" class="form-control" name="hub_password" placeholder="Enter The Password">
+        <input type="password" class="form-control" name="hub_password" placeholder="Enter The Password" required>
       </div>
       <div class="form-group margin-top">
         <div class="col-lg-4 col-md-4 col-sm-4">
@@ -35,12 +35,12 @@
       <strong>User Id</strong>
       <div class="input-group margin-top">
         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-        <input name="employee_id" type="text" class="form-control" placeholder="Enter the Employee Id">
+        <input name="employee_id" type="text" class="form-control" placeholder="Enter the Employee Id" required>
       </div><br>
       <strong>Password</strong>
       <div class="input-group margin-top">
         <span class="input-group-addon"><i class="glyphicon glyphicon-lock "></i></span>
-        <input name="employee_password" type="password" class="form-control" placeholder="Enter The Password">
+        <input name="employee_password" type="password" class="form-control" placeholder="Enter The Password" required>
       </div>
       <div class="form-group margin-top">
         <div class="col-lg-4 col-md-4 col-sm-4">
