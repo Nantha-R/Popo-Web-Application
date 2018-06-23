@@ -1,10 +1,13 @@
+<!DOCTYPE html>
 <html>
 <head>
   <title>Login</title>
+  <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="cssFiles/login.css">
+  <?php include "base_header.html" ?>
 </head>
 <body>
-  <?php include "base.html";?>
+  <?php include "base_navbar.html";?>
   <script>
     document.getElementById('login-header').classList.add('active');
     document.getElementById('login-header').childNodes[0].removeAttribute('href');
