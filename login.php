@@ -10,7 +10,7 @@
     document.getElementById('login-header').childNodes[0].removeAttribute('href');
   </script>
   <div class="col-lg-6 col-md-6 col-sm-10">
-    <form class="form-horizontal login-form" role="form" action="hub_login.php" method="post">
+    <form class="form-horizontal login-form" role="form" action="phpFiles/hub_login.php" method="post">
       <center><h2>Hub Login</h2></center>
       <strong>Hub Id</strong>
       <div class="input-group margin-top">
@@ -30,7 +30,7 @@
     </form>
   </div>
   <div class="col-lg-6 col-md-6 col-sm-12">
-    <form class="form-horizontal login-form" role="form" action="employee_login.php" method="post">
+    <form class="form-horizontal login-form" role="form" action="phpFiles/employee_login.php" method="post">
       <center><h2>Employee Login</h2></center>
       <strong>User Id</strong>
       <div class="input-group margin-top">
