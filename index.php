@@ -1,3 +1,4 @@
+<!-- View for displaying the homepage of the website -->
 <!DOCTYPE html>
 <html>
 <head>

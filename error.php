@@ -1,3 +1,4 @@
+<!-- Handles the errors that are produced on the server side. -->
 <!DOCTYPE html>
 <html>
 <head>

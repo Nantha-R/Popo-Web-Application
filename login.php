@@ -1,3 +1,4 @@
+<!-- Login page for hub and employee -->
 <!DOCTYPE html>
 <html>
 <head>
