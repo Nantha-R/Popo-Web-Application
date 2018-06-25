@@ -21,7 +21,7 @@ if(isset($_POST['hub_id'],$_POST['hub_password']))
   else
   {
     // If the given hub_id and hub_password does not exists in Database.
-    store_session('not_found','hub_login');
+    store_session('hub_credentials_not_found',True);
     header('Location: ../login.php');
   }
 }

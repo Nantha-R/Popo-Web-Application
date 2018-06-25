@@ -22,8 +22,59 @@ function log_message($message,$level)
  */
 function store_session($key,$value)
 {
-  session_start();
+  if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+  }
   $_SESSION[$key] = $value;
 }
 
+/**
+ * Used to check if a session variable is present or not
+ * @param string key
+ * key : Key of the session variable.
+ * @return Boolean
+ * Returns a Boolean value based on session variables present
+ */
+function isset_session($key)
+{
+  if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+  }
+  if(isset($_SESSION[$key]))
+    return True;
+  else
+    return False;
+}
+
+/**
+ * Used to retrieve the session variable
+ * @param string key
+ * key : Key of the session variable.
+ * @return string
+ * Returns the value of the session variable
+ */
+function get_session($key)
+{
+  if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+  }
+  if(isset($_SESSION[$key]))
+    return $_SESSION[$key];
+  else
+    return NULL;
+}
+
+/**
+ * Used to remove the session variable
+ * @param string key
+ * key : Key of the session variable.
+ * @return NULL
+ */
+function remove_session($key)
+{
+  if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+  }
+  unset($_SESSION[$key]);
+}
 ?>

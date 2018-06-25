@@ -26,6 +26,13 @@
         <span class="input-group-addon"><i class="glyphicon glyphicon-lock "></i></span>
         <input type="password" class="form-control" name="hub_password" placeholder="Enter The Password" required>
       </div>
+      <?php
+        include "phpFiles/utilities.php";
+        if(isset_session('hub_credentials_not_found'))
+          if(get_session('hub_credentials_not_found'))
+            echo "<h4 style='color:red'>Invalid user credentials</h4>";
+        store_session('hub_credentials_not_found',False);
+       ?>
       <div class="form-group margin-top">
         <div class="col-lg-4 col-md-4 col-sm-4">
           <input style="width:50%" type="submit" value="Login" class="btn btn-success"/>
@@ -46,6 +53,12 @@
         <span class="input-group-addon"><i class="glyphicon glyphicon-lock "></i></span>
         <input name="employee_password" type="password" class="form-control" placeholder="Enter The Password" required>
       </div>
+      <?php
+        if(isset_session('employee_credentials_not_found'))
+          if(get_session('employee_credentials_not_found'))
+            echo "<h4 style='color:red'>Invalid user credentials</h4>";
+        store_session('employee_credentials_not_found',False);
+       ?>
       <div class="form-group margin-top">
         <div class="col-lg-4 col-md-4 col-sm-4">
           <input style="width:50%" type="submit" value="Login" class="btn btn-success" />
