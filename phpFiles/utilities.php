@@ -1,4 +1,5 @@
 <?php
+session_start();
 /**
  * Used for logging messages
  * @param string message, string $level
@@ -22,9 +23,6 @@ function log_message($message,$level)
  */
 function store_session($key,$value)
 {
-  if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-  }
   $_SESSION[$key] = $value;
 }
 
@@ -37,9 +35,6 @@ function store_session($key,$value)
  */
 function isset_session($key)
 {
-  if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-  }
   if(isset($_SESSION[$key]))
     return True;
   else
@@ -55,9 +50,6 @@ function isset_session($key)
  */
 function get_session($key)
 {
-  if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-  }
   if(isset($_SESSION[$key]))
     return $_SESSION[$key];
   else
@@ -72,9 +64,6 @@ function get_session($key)
  */
 function remove_session($key)
 {
-  if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-  }
   unset($_SESSION[$key]);
 }
 ?>
