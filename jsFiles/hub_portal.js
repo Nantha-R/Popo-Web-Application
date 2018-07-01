@@ -15,7 +15,13 @@ function get_hub_details()
       hub_information_table.rows.add(result).draw();
     },
     error : function(result){
-       //Display a toast message regarding the error
+      $.toast({
+        heading: 'Error',
+        text: result,
+        showHideTransition: 'slide',
+        icon: 'error',
+        position: 'top-center'
+      });
     }
   }).always(function()
   {

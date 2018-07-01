@@ -19,6 +19,9 @@ if(!isset_session('hub_id'))
     <!-- For datatable -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+    <!-- For toast messages -->
+    <link rel="stylesheet" type="text/css" href="libraryFiles/toast_message/dist/jquery.toast.min.css">
+    <script type="text/javascript" src="libraryFiles/toast_message/dist/jquery.toast.min.js"></script>
   </head>
 <body>
   <div class="row">
