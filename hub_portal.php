@@ -29,8 +29,8 @@ if(!isset_session('hub_id'))
   </div>
   <?php include "base_hub_nav_bar.html"; ?>
   <script>
-    document.getElementById('hub_portal_header').classList.add('active');
-    document.getElementById('hub_portal_header').childNodes[0].removeAttribute('href');
+    document.querySelector('#hub_portal_header').classList.add('active');
+    document.querySelector('#hub_portal_header a').removeAttribute('href');
   </script>
   <div class="row center-block">
     <div class="col-lg-8 col-md-8 col-sm-12" style="padding:4%">

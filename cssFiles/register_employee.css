@@ -1,0 +1,30 @@
+.title
+{
+  font-family: "Times New Roman";
+  padding-left: 40%;
+  font-size: 48px;
+  color: #337ab7;
+  display: block;
+}
+
+#register_employee_form
+{
+  width: 500px;
+  height:450px;
+  padding:20px;
+  border:1px solid black;
+  background:#C0C0C0;
+  margin-top:2%;
+}
+
+#register_employee_form:hover
+{
+  width:510px;
+  height:460px;
+  background:#CCC;
+}
+
+td
+{
+  padding:10px;
+}
