@@ -56,8 +56,14 @@ if(!isset_session('hub_id'))
       <center>
         <span class="product-id-text">Enter Product ID</span>
         <form action="phpFiles/get_product_by_id.php" method="post">
-          <input type="text" name="product_id" style="width:250px"/>
+          <input type="text" name="product_id" style="width:250px" required/>
           <br><br>
+          <?php
+            if(isset_session('product_details_not_found'))
+              if(get_session('product_details_not_found'))
+                echo "<h4 style='color:red'>Product id does not exists</h4>";
+            store_session('product_details_not_found',False);
+           ?>
           <input type="submit" value="Enter" class="btn btn-success "/>
         </form>
       </center>

@@ -27,7 +27,9 @@ if(isset($_POST['hub_id'],$_POST['hub_password']))
 }
 else
 {
-  // If post variables does not exists.
-  header('Location: ../index.php');
+  // If post variables does not exists
+  $message = 'Invalid post request';
+  store_session("error_message",$message);
+  header('Location: ../error.php');
 }
 ?>
