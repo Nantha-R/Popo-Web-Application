@@ -13,6 +13,9 @@ if(!isset_session('hub_id'))
   <title>Employee Registration</title>
   <?php include 'base_header.html' ?>
   <link rel="stylesheet" type="text/css" href="cssFiles/register_employee.css">
+  <!-- For toast messages -->
+  <link rel="stylesheet" type="text/css" href="libraryFiles/toast_message/dist/jquery.toast.min.css">
+  <script type="text/javascript" src="libraryFiles/toast_message/dist/jquery.toast.min.js"></script>
 </head>
 <body>
   <div class="row">

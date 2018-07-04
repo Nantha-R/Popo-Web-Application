@@ -32,7 +32,7 @@ function get_db_connection()
 }
 
 /**
- * Used for executing SQL queries.
+ * Used for executing SQL queries(SELECT query).
  * @param string query
  * query : Sql query to be executed.
  * @return results
@@ -43,5 +43,33 @@ function execute_query($query)
   $conn = get_db_connection();
   $result = mysqli_query($conn, $query);
   return $result;
+}
+
+/**
+ * Used for executing SQL queries(INSERT query).
+ * @param string query
+ * query : Sql query to be executed.
+ * @return results
+ * results : Result of the executes sql query.
+ */
+function insert_query($query)
+{
+  $conn = get_db_connection();
+  $result = mysqli_query($conn, $query);
+  if($result)
+  {
+    $response['status'] = 'success';
+  }
+  else
+  {
+    $level = "ERROR";
+    $message = sprintf("Internal server error when executing the given sql query : %s",
+                        $query);
+    log_message($message, $level);
+    // Redirect to error.php file.
+    store_session("error_message",$message);
+    $response['status'] = 'error';
+  }
+  return $response;
 }
 ?>
