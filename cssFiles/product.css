@@ -1,0 +1,28 @@
+.title
+{
+  font-family: "Times New Roman";
+  padding-left: 40%;
+  font-size: 48px;
+  color: #337ab7;
+  display: block;
+}
+
+#product_details_form
+{
+  width:40%;
+  padding:1%;
+  border:1px solid black;
+  background:#C0C0C0;
+  margin-top:50px;
+}
+
+#product_details_form:hover
+{
+  width:41%;
+  background:#CCC;
+}
+
+td
+{
+  padding:10px;
+}

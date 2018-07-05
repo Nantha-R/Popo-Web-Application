@@ -55,7 +55,7 @@ if(!isset_session('hub_id'))
     <div class="col-lg-4 col-md-4 col-sm-12" style="padding:3%">
       <center>
         <span class="product-id-text">Enter Product ID</span>
-        <form action="phpFiles/get_product_by_id.php" method="post">
+        <form action="product.php" method="get">
           <input type="text" name="product_id" style="width:250px" required/>
           <br><br>
           <?php
