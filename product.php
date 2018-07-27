@@ -38,6 +38,9 @@
   <!-- datetime picker -->
   <link rel="stylesheet" type="text/css" href="libraryFiles/datetimepicker/build/jquery.datetimepicker.min.css"/ >
   <script src="libraryFiles/datetimepicker/build/jquery.datetimepicker.full.min.js"></script>
+  <!-- For toast messages -->
+  <link rel="stylesheet" type="text/css" href="libraryFiles/toast_message/dist/jquery.toast.min.css">
+  <script type="text/javascript" src="libraryFiles/toast_message/dist/jquery.toast.min.js"></script>
 </head>
 <body>
   <div class="row">
@@ -51,12 +54,11 @@
     document.querySelector('#product_header').classList.add('active');
     document.querySelector('#product_header a').removeAttribute('href');
   </script>
-  <form class="form-horizontal center-block"  id = "product_details_form"
-        method="post" action="update_product.php"  >
+  <form class="form-horizontal center-block"  id = "product_details_form">
     <table>
       <tr>
         <td><strong>Product ID :</strong></td>
-        <td><?php echo $product_details["product_id"];?></td>
+        <td id='product_id'><?php echo $product_details["product_id"];?></td>
       </tr>
       <tr>
         <td><strong>Sender Name :</strong></td>
@@ -93,7 +95,8 @@
       <tr>
         <td><strong>Date of Arrival :</strong></td>
         <td>
-           <input id="datetimepicker" type="text" >
+           <input id="datetimepicker" name='date_of_arrival' type="text"
+                  value='<?php echo $product_details['date_of_arrival']?>'>
            <script>
             $('#datetimepicker').datetimepicker();
            </script>
@@ -102,10 +105,11 @@
       <tr>
         <td></td>
         <td>
-          <input type="submit" value="Register" class="btn btn-primary"/>
+          <input type="submit" value="Update Date of Arrival" class="btn btn-primary"/>
         </td>
       </tr>
     </table>
    </form>
  </body>
+ <script src="jsFiles/product.js"></script>
  </html>
