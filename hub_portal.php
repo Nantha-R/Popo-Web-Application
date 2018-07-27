@@ -12,6 +12,7 @@ if(!isset_session('hub_id'))
   <head>
     <title>Hub Information</title>
     <?php include 'base_header.html' ?>
+    <?php include 'base_hub_header.html' ?>
     <link rel="stylesheet" type="text/css" href="cssFiles/hub_portal.css">
     <!-- For loading animation -->
     <link href="libraryFiles/loading_bar/dist/app.css" rel="stylesheet">
@@ -19,17 +20,8 @@ if(!isset_session('hub_id'))
     <!-- For datatable -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
-    <!-- For toast messages -->
-    <link rel="stylesheet" type="text/css" href="libraryFiles/toast_message/dist/jquery.toast.min.css">
-    <script type="text/javascript" src="libraryFiles/toast_message/dist/jquery.toast.min.js"></script>
   </head>
 <body>
-  <div class="row">
-    <div class="col-lg-1 col-md-4 col-sm-4">
-      <a href="index.php"> <img src="imageFiles/logo.png" style="width:100px;"/></a>
-    </div>
-    <span class="title">Hub Portal</span>
-  </div>
   <?php include "base_hub_nav_bar.html"; ?>
   <script>
     document.querySelector('#hub_portal_header').classList.add('active');

@@ -12,18 +12,10 @@ if(!isset_session('hub_id'))
 <head>
   <title>Employee Registration</title>
   <?php include 'base_header.html' ?>
+  <?php include 'base_hub_header.html' ?>
   <link rel="stylesheet" type="text/css" href="cssFiles/register_employee.css">
-  <!-- For toast messages -->
-  <link rel="stylesheet" type="text/css" href="libraryFiles/toast_message/dist/jquery.toast.min.css">
-  <script type="text/javascript" src="libraryFiles/toast_message/dist/jquery.toast.min.js"></script>
 </head>
 <body>
-  <div class="row">
-    <div class="col-lg-1 col-md-4 col-sm-4">
-      <a href="index.php"> <img src="imageFiles/logo.png" style="width:100px;"/></a>
-    </div>
-    <span class="title">Hub Portal</span>
-  </div>
   <?php include "base_hub_nav_bar.html"; ?>
   <script>
     document.querySelector('#register_employee_header').classList.add('active');
