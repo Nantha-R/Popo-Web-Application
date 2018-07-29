@@ -1,0 +1,22 @@
+
+#register_sales_person_form
+{
+  width: 500px;
+  padding:20px;
+  border:1px solid black;
+  background:#C0C0C0;
+  border-radius:3px;
+  margin-top:50px;
+}
+
+.f1:hover
+{
+  width:510px;
+  background:#CCC;
+}
+
+table,td
+{
+  margin-bottom:20px;
+  padding:10px;
+}
