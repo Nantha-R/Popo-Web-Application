@@ -1,12 +1,22 @@
 <?php
   include 'phpFiles/utilities.php';
   include 'phpFiles/db_utilities.php';
+  $valid_hub_id = false;
+  if(isset_session('hub_id'))
+  {
+    $hub_id = get_session('hub_id');
+    $valid_hub_id = true;
+  }
+  elseif (isset_session('employee_hub_id'))
+  {
+    $hub_id = get_session('employee_hub_id');
+    $valid_hub_id = true;
+  }
   // Check if the GET request is valid
-  if(isset($_GET['product_id']) && isset_session('hub_id'))
+  if(isset($_GET['product_id']) && $valid_hub_id)
   {
     $package_table_name = 'package';
     $product_id = $_GET['product_id'];
-    $hub_id = get_session('hub_id');
     $query = sprintf("SELECT * FROM %s WHERE product_id = '%s' AND hub_id = '%s'",
                       $package_table_name,$product_id,$hub_id);
     $result = execute_query($query);
@@ -19,7 +29,10 @@
     {
       //If the product does not exist for the hub id
       store_session('product_details_not_found',True);
-      header('Location: hub_portal.php');
+      if (isset_session('hub_id'))
+        header('Location: hub_portal.php');
+      else
+        header('Location: employee_portal.php');
     }
   }
   else
@@ -41,7 +54,12 @@
   <script src="libraryFiles/datetimepicker/build/jquery.datetimepicker.full.min.js"></script>
 </head>
 <body>
-  <?php include "base_hub_nav_bar.html"; ?>
+  <?php
+    if(isset_session('hub_id'))
+      include 'base_hub_nav_bar.html';
+    else
+      include 'base_employee_nav_bar.html';
+  ?>
   <script>
     document.querySelector('#product_header').classList.add('active');
     document.querySelector('#product_header a').removeAttribute('href');
