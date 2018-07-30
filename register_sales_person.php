@@ -26,24 +26,24 @@
     <table>
       <tr>
         <td><strong>Salesperson Name:</strong></td>
-        <td><input type="text" name="sales_person_name" class="box form-control"/></td>
+        <td><input type="text" name="sales_person_name" class="box form-control" required/></td>
       </tr>
       <tr>
         <td><strong>Salesperson ID:</strong></td>
-        <td><input type="text" name="sales_person_id" class="box form-control" /></td>
+        <td><input type="text" name="sales_person_id" class="box form-control" required/></td>
       </tr>
       <tr>
         <td><strong>Phone Number:</strong></td>
-        <td><input type="text" name="phone_no" class="box form-control" /></td>
+        <td><input type="text" name="phone_no" class="box form-control" required/></td>
       </tr>
       <tr>
         <td><strong>Location:</strong></td>
-        <td><input type="text" name="location" class="box form-control" /></td>
+        <td><input type="text" name="location" class="box form-control" required/></td>
       </tr>
       <tr>
         <td><strong>Vehicle:</strong></td>
         <td>
-          <select id="vehicle" name="vehicle" class="box form-control">
+          <select id="vehicle" name="vehicle" class="box form-control" required>
             <option value="" disabled selected>Select Vehicle</option>
             <option value="Bike">Bike</option>
             <option value="Cycle">Cycle</option>
@@ -52,11 +52,15 @@
       </tr>
       <tr>
         <td><strong>Password:</strong></td>
-        <td><input type="password" name="password" id="password" class="box form-control"/></td>
+        <td><input type="password" name="password" id="password" class="box form-control" required/></td>
       </tr>
       <tr>
         <td><strong>Confirm Password:</strong></td>
-        <td><input type="password" name="confirm_password" id="confirm_password" class="box form-control"/></td>
+        <td><input type="password" name="confirm_password" id="confirm_password" class="box form-control" required/></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td id="password_mismatch_error"></td>
       </tr>
       <tr>
         <td></td>
@@ -67,4 +71,5 @@
     </table>
    </form>
 </body>
+<script src="jsFiles/register_sales_person.js"></script>
 </html>
