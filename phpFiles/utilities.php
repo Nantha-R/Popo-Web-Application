@@ -66,4 +66,10 @@ function remove_session($key)
 {
   unset($_SESSION[$key]);
 }
+
+function logout_session()
+{
+  session_unset();
+  session_destroy();
+}
 ?>
