@@ -16,6 +16,8 @@ if(isset($_POST['hub_id'],$_POST['hub_password']))
   {
     // If the given hub_id and hub_password exists in Database.
     store_session('hub_id',$hub_id);
+    remove_session('employee_hub_id');
+    remove_session('employee_id');
     header('Location: ../hub_portal.php');
   }
   else

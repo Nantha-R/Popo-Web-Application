@@ -11,7 +11,10 @@
     $result = execute_query($query);
     if($result->num_rows == 1)
     {
+      $result = mysqli_fetch_assoc($result);
       store_session('employee_id',$employee_id);
+      store_session('employee_hub_id', $result['hub_id']);
+      remove_session('hub_id');
       header('Location: ../employee_portal.php');
     }
     else
