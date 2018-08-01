@@ -1,0 +1,21 @@
+
+table,td,th
+{
+	padding:10px;
+}
+
+#new_product_registration_form
+{
+	width: 500px;
+	padding:20px;
+	border:1px solid black;
+	background:#C0C0C0;
+	color:#353535;
+	margin-top:50px;
+  margin-bottom:50px;
+}
+
+#new_product_registration_form:hover
+{
+	background:#CCC;
+}

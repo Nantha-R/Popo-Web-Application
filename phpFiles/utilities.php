@@ -72,4 +72,29 @@ function logout_session()
   session_unset();
   session_destroy();
 }
+
+function get_date_of_entry()
+{
+  date_default_timezone_set("Asia/Kolkata");
+  return date("Y-m-d H:i:s");
+}
+
+function get_date_of_arrival($area_type, $current_time)
+{
+  $number_of_days = 1;
+  if($area_type=='rural')
+  {
+    $number_of_days = 2;
+  }
+  $current_time = new DateTime($current_time);
+  while($number_of_days!=0)
+  {
+      $current_time->modify('+1 day');
+      if($current_time->format('l')!='Sunday')
+      {
+        $number_of_days --;
+      }
+  }
+  return $current_time->format('Y-m-d H:i:s');;
+}
 ?>
