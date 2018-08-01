@@ -92,7 +92,7 @@
       </tr>
       <tr>
         <td><strong>Receiver Email :</strong></td>
-        <td><?php echo $product_details["receiver_mail"];?></td>
+        <td><?php echo $product_details["receiver_email"];?></td>
       </tr>
       <tr>
         <td><strong>Receiver Phone :</strong></td>
