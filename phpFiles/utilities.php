@@ -97,4 +97,16 @@ function get_date_of_arrival($area_type, $current_time)
   }
   return $current_time->format('Y-m-d H:i:s');;
 }
+
+function send_email($product_id,$sender_name,$receiver_name,
+                    $sender_email,$receiver_email,$hashed_record)
+{
+  $http_link = 'https://localhost/popo/product.php?hashed_record='.$hashed_record;
+  $email_subject = "Speed Post";
+  $email_content = sprintf("Greetings\n,The package '%s' sent by '%s' to '%s' has been dispatched.\n "
+                           ."For more details visit the below link '%s'",
+                           $product_id,$sender_name,$receiver_name,$http_link);
+  mail($sender_email,$email_subject,$email_content);
+  mail($receiver_email,$email_subject,$email_content);
+}
 ?>

@@ -21,12 +21,15 @@
     $hub_id = get_session('employee_hub_id');
     $package_table = 'package';
     $status = 'Pending';
-    $query = sprintf("INSERT INTO %s VALUES(0,'%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s')",
+    $hashed_record = sha1(http_build_query($_POST));
+    $query = sprintf("INSERT INTO %s VALUES(0,'%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s')",
                       $package_table,$hub_id,$date_of_entry,$date_of_arrival,
                       $status,$source_city,$destination_city,
                       $sender_name,$sender_email,$sender_number,$sender_address,
-                      $receiver_name,$receiver_email,$receiver_number,$receiver_address);
+                      $receiver_name,$receiver_email,$receiver_number,$receiver_address,$hashed_record);
     $response = insert_query($query);
+    send_email($product_id,$sender_name,$receiver_name,
+               $sender_email,$receiver_email,$hashed_record);
   }
   else
   {
